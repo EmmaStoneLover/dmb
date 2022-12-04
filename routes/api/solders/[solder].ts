@@ -1,5 +1,5 @@
 import { HandlerContext } from "$fresh/server.ts"
-import { badGays } from '../../../список пидорасов.js'
+import { badGays } from '../../../pidorastsList.js'
 
 interface GaysInterface {
   name: string[];
