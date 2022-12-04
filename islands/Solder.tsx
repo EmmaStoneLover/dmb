@@ -2,11 +2,14 @@ import { useState, useEffect } from "preact/hooks"
 // import { PageProps } from "$fresh/server.ts"
 
 interface PageProps {name: string}
+interface TextInterface {
+  text?: string;
+  custom?: { textColor: string, bgColor: string, text: string };
+  before: string;
+}
 
 export default function Solder({ name }: PageProps) {
-  const [text, setText] = useState({ 
-    text: undefined,
-    custom: { textColor: undefined, bgColor: undefined, text: undefined },
+  const [text, setText] = useState<TextInterface>({
     before: 'ща поищу...' 
   })
 
@@ -23,14 +26,14 @@ export default function Solder({ name }: PageProps) {
     <div>
       <p class="text-xl italic dark:text-light">
         Этот хуй, по прозвищу 
-        <span class='text-4xl dark:text-white'>
+        <span class='ml-2 text-4xl dark:text-white'>
           { `${name[0].toUpperCase() + name.substring(1)}` }
         </span>
       </p>
       <p class='text-2xl italic dark:text-white'>
         { text.text ? `"${text.text}"` : text.before }
       </p>
-      { text.custom.text ? 
+      { text.custom ? 
         <p class={`text-2xl p-1 mt-1 rounded italic
                   text-[${text.custom.textColor}] bg-[${text.custom.bgColor}]`}>
           {text.custom.text}
