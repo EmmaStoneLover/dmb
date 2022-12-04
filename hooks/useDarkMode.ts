@@ -1,7 +1,7 @@
 import { useState, useEffect } from "preact/hooks";
 
 export default function useDarkMode() {
-    const [isDarkMode, setIsDarkMode] = useState( localStorage.theme === 'dark' )
+    const [isDarkMode, setIsDarkMode] = useState( true )
     const toggleDarkMode = () => { setIsDarkMode(!isDarkMode) }
     useEffect(() => {
         const html = window.document.documentElement
