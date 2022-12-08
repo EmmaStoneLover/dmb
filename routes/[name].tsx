@@ -7,10 +7,6 @@ const navLinks = [
   {name: 'ДМБ', link: '/'},
 ]
 
-// interface FuckingProps extends PageProps {
-//   name: string;
-// }
-
 export default function Greet(props: PageProps) {
   return (
     <Center title="Педики">

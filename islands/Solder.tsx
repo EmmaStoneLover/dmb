@@ -15,10 +15,11 @@ export default function Solder({ name }: PageProps) {
 
   name = decodeURIComponent(name)
   useEffect( () => {
-    fetch(`http://localhost:8000/api/solders/${name}`)
+    fetch(`https://dmb.deno.dev/api/solders/${name}`, {mode: "same-origin"})
     .then( async res => await res.json())
     .then( data => {
       setTimeout(() => { setText( data ) }, 500)
+      // setText( data )
     })
   }, [])
   
