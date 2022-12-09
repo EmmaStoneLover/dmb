@@ -19,7 +19,6 @@ export default function Solder({ name }: PageProps) {
     .then( async res => await res.json())
     .then( data => {
       setTimeout(() => { setText( data ) }, 500)
-      // setText( data )
     })
   }, [])
   
