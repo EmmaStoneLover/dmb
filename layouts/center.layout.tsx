@@ -19,11 +19,11 @@ export default function Center(props: FuckingProps) {
             { props.children }
           </div>
         </div>
-        <div class="fixed bottom-2 right-2 left-2 mx-auto text-right">
+        {/* <div class="fixed bottom-2 right-2 left-2 mx-auto text-right">
           <p class="dark:text-light italic text-sm">
             Эта хуйня придумана укропами что-бы захватить мир ааааааааааааа
           </p>
-        </div>
+        </div> */}
       </div>
     </html>
   )
